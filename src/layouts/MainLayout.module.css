@@ -1,0 +1,4 @@
+.bodyWrapper {
+    margin-top: var(--min-height);
+    height: calc(100vh - var(--min-height));
+}

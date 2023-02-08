@@ -1,0 +1,10 @@
+.footerWrapper {
+    font-family: 'Syne Mono', monospace;
+    height: var(--min-height);
+    padding: var(--padding);
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
