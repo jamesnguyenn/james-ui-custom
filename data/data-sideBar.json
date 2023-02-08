@@ -1,0 +1,54 @@
+{
+    "dataSideBar": [
+        {
+            "id": "1",
+            "title": "General",
+            "children": [
+                {
+                    "id": "1",
+                    "title": "Button"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "title": "Layout",
+            "children": [
+                {
+                    "id": "1",
+                    "title": "Layout"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "title": "Navigation",
+            "children": [
+                {
+                    "id": "1",
+                    "title": "Pagination"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "title": "Data Entry",
+            "children": [
+                {
+                    "id": "1",
+                    "title": "Calendar"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "title": "Navigation",
+            "children": [
+                {
+                    "id": "1",
+                    "title": "Pagination"
+                }
+            ]
+        }
+    ]
+}

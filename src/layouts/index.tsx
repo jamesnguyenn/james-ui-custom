@@ -5,21 +5,26 @@ import Header from './Header'
 import classes from "./MainLayout.module.css"
 import SideBar from './Sidebar'
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode,
+  sideBarMenuData: any
 }
 
-function MainLayout({ children }: Props) {
+function MainLayout({ children, sideBarMenuData, ...props }: Props) {
+  console.log("🚀 ~ sideBarMenuData", sideBarMenuData)
   return (
 
     <>
       <Header />
       <div className={classes.bodyWrapper}>
-        <SideBar />
+        <SideBar sideBarMenuData={sideBarMenuData} />
         {children}
         {/* <Footer /> */}
       </div>
     </>
   )
 }
+
+
+
 
 export default MainLayout

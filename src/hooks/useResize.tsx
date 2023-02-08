@@ -7,7 +7,7 @@ export function useResize(props?: Props) {
     const [height, setHeight] = useState<number>(0);
     const [elementRef, setElementRef] = useState<HTMLElement | null>(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (props?.element) {
             setElementRef(props?.element)
         } else {
