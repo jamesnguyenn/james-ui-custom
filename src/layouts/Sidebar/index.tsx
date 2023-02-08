@@ -4,7 +4,7 @@ interface Props { }
 
 const SideBar = (props: Props) => {
     return (
-        <div className={classes.sideBarWrapper}>SideBar</div>
+        <div className={classes.sideBarWrapper}></div>
     )
 }
 

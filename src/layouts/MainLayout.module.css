@@ -1,4 +1,5 @@
 .bodyWrapper {
     margin-top: var(--min-height);
+    padding-top: 16px;
     height: calc(100vh - var(--min-height));
 }

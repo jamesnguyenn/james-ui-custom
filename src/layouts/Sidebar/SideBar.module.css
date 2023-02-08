@@ -1,15 +1,17 @@
 .sideBarWrapper {
     height: 100%;
-    background-color: #000;
+    background-color: var(--background-primary);
     flex: 0 0 200px;
     min-width: 200px;
     max-width: 200px;
-    background-color: #000;
+    border-right: 1px solid var(--border-color);
+    padding: 0 40px;
+    font-size: 14px;
 }
 
 .sideBarWrapperOpened {
     flex: 0 0 200px;
     min-width: 200px;
     max-width: 200px;
-    background-color: #000;
+    /* background-color: #000; */
 }
