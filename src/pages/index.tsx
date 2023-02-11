@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import MainLayout from '@/layouts'
-import { NextPageContext } from 'next';
-import sideBarMenuData from "../../data/data-sideBar.json"
+import sideBarMenuDataJSON from "../../data/data-sideBar.json"
 
 export default function Home({ sideBarMenuData }: any) {
 
@@ -18,7 +15,7 @@ export default function Home({ sideBarMenuData }: any) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <MainLayout sideBarMenuData={sideBarMenuData?.dataSideBar}>
+      <MainLayout sideBarMenuData={sideBarMenuDataJSON?.dataSideBar}>
         <main className={styles.main}>
 
         </main>
@@ -29,15 +26,15 @@ export default function Home({ sideBarMenuData }: any) {
 
 
 
-export async function getStaticProps(context: NextPageContext) {
+// export async function getStaticProps() {
 
-  return {
-    props: {
-      sideBarMenuData
-    }
-  }
+//   return {
+//     props: {
+//       sideBarMenuData: sideBarMenuDataJSON
+//     }
+//   }
 
-}
-export const config = {
-  runtime: 'experimental-edge',
-}
+// }
+// export const config = {
+//   runtime: 'experimental-edge',
+// }
