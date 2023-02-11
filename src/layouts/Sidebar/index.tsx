@@ -4,6 +4,7 @@ import React from 'react'
 import classes from "./SideBar.module.css";
 import { Button } from "../../common"
 import { ISidebarChild, ISidebarParent } from '@/interface/Sidebar';
+import Link from 'next/link';
 
 interface Props {
     sideBarMenuData: ISidebarParent[]
@@ -19,7 +20,9 @@ const SideBar = (props: Props) => {
                     <ul className={classes.menuChildWrapper}>
                         {menuParent?.children && menuParent?.children.length > 0 && menuParent?.children.map((menuChild: ISidebarChild) => {
                             return <li key={menuChild?.id} className={classes.menuChildItem}>
-                                <h3 className={classes.menuChildTitle}>{menuChild?.title}</h3>
+                                <Link href={menuChild?.page ? menuChild?.page : ""} >
+                                    <h3 className={classes.menuChildTitle}>{menuChild?.title}</h3>
+                                </Link>
                             </li>
                         })}
                     </ul>

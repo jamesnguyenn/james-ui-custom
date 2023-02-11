@@ -12,7 +12,7 @@ function HeaderWeb({ }: Props) {
                 <Link href={"/"}>
                     <div className={classes.logo}>
                         <Image src={logo} width={50} height={50} alt="logo" />
-                        <span>UI Component Custom</span>
+                        <span>Front End Component Example</span>
                     </div>
                 </Link>
 

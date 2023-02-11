@@ -7,5 +7,5 @@ export interface ISidebarParent {
 export interface ISidebarChild {
     id: string;
     title: string;
-    component: React.ReactElement;
+    page: string;
 }
