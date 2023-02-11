@@ -9,7 +9,7 @@ const nextConfig = {
     },
 };
 
-// module.exports = nextConfig;
+module.exports = nextConfig;
 // const withTypeScript = require('next-tsc');
 // module.exports = withTypeScript();
 
