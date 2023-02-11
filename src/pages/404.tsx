@@ -1,5 +1,5 @@
 import ErrorPage from '@/components/ErrorPage'
-import React from 'react'
+
 
 interface Props { }
 
