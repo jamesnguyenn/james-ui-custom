@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import classes from "./HeaderWeb.module.css"
-import logo from "../../../public/images/logo.png"
+import logo from "../../../public/images/logo.webp"
 import Link from 'next/link'
 interface Props { }
 
