@@ -9,11 +9,13 @@ const nextConfig = {
     },
 };
 
-module.exports = nextConfig;
+module.exports = {
+    nextConfig,
+};
 // const withTypeScript = require('next-tsc');
 // module.exports = withTypeScript();
 
-// // next.config.js
-// const withTM = require('next-transpile-modules')(['james-ui-custom']); // pass the modules you would like to see transpiled
+// next.config.js
+const withTM = require('next-transpile-modules')(['james-ui-custom']); // pass the modules you would like to see transpiled
 
-// module.exports = withTM({});
+module.exports = withTM({});
