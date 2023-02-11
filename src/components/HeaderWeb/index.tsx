@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 import classes from "./HeaderWeb.module.css"
-import logo from "../../../public/images/logo.webp"
 import Link from 'next/link'
 interface Props { }
 
@@ -11,7 +10,7 @@ function HeaderWeb({ }: Props) {
             <div className={classes.headerLogoWrapper}>
                 <Link href={"/"}>
                     <div className={classes.logo}>
-                        <Image src={logo} width={50} height={50} alt="logo" />
+                        <Image src={"/images/logo.webp"} width={50} height={50} alt="logo" />
                         <span>Front End Component Example</span>
                     </div>
                 </Link>
