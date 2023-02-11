@@ -27,6 +27,14 @@
                 {
                     "id": "1",
                     "title": "Pagination"
+                },
+                {
+                    "id": "2",
+                    "title": "Dropdown"
+                },
+                {
+                    "id": "3",
+                    "title": "Breadcrumb"
                 }
             ]
         },
@@ -37,6 +45,14 @@
                 {
                     "id": "1",
                     "title": "Calendar"
+                },
+                {
+                    "id": "2",
+                    "title": "DatePicker"
+                },
+                {
+                    "id": "3",
+                    "title": "TimePicker"
                 }
             ]
         },

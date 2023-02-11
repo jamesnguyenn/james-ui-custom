@@ -1,12 +1,13 @@
 .sideBarWrapper {
     height: 100%;
     background-color: var(--background-primary);
-    flex: 0 0 200px;
-    min-width: 200px;
-    max-width: 200px;
+    flex: 0 0 250px;
+    min-width: 250px;
+    max-width: 250px;
     border-right: 1px solid var(--border-color);
-    padding: 0 40px;
+    padding: 16px 40px;
     font-size: 14px;
+    overflow-y: auto;
 }
 
 .sideBarWrapperOpened {
@@ -14,4 +15,58 @@
     min-width: 200px;
     max-width: 200px;
     /* background-color: #000; */
+}
+.menuParentWrapper {
+    margin-top: 16px;
+}
+.menuParentTitle {
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 13px;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+    padding: 8px 0;
+    user-select: none;
+    cursor: default;
+}
+.menuChildWrapper {
+}
+.menuChildItem {
+    padding: 8px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menuChildTitle {
+    overflow: hidden;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.sideBarWrapper {
+    scrollbar-width: auto;
+    scrollbar-color: #909090;
+}
+
+/* Chrome, Edge, and Safari */
+.sideBarWrapper::-webkit-scrollbar {
+    width: 15px;
+}
+
+.sideBarWrapper::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.sideBarWrapper::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 10px;
+    border: 5px solid #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+.sideBarWrapper:hover::-webkit-scrollbar-thumb {
+    opacity: 1;
+    visibility: visible;
 }

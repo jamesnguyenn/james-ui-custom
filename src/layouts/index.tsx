@@ -10,15 +10,16 @@ interface Props {
 }
 
 function MainLayout({ children, sideBarMenuData, ...props }: Props) {
-  console.log("🚀 ~ sideBarMenuData", sideBarMenuData)
   return (
 
     <>
       <Header />
       <div className={classes.bodyWrapper}>
-        <SideBar sideBarMenuData={sideBarMenuData} />
-        {children}
-        {/* <Footer /> */}
+        <div className={classes.bodyContainer} >
+          <SideBar sideBarMenuData={sideBarMenuData} />
+          {children}
+          {/* <Footer /> */}
+        </div>
       </div>
     </>
   )

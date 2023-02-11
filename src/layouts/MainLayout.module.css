@@ -1,5 +1,7 @@
 .bodyWrapper {
-    margin-top: var(--min-height);
-    padding-top: 16px;
-    height: calc(100vh - var(--min-height));
+    height: 100vh;
+    padding-top: var(--min-height);
+}
+.bodyContainer {
+    height: 100%;
 }
