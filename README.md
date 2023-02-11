@@ -19,5 +19,5 @@ After installing, please help me: </br>
 ```
 const withTM = require('next-transpile-modules')(['james-ui-custom']); // pass the modules you would like to see transpiled
 
-module.exports = withTM({});
+module.exports = withTM({nextConfig});
 ```

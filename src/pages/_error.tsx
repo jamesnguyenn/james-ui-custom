@@ -1,11 +1,12 @@
+import ErrorPage from '@/components/ErrorPage'
 import React from 'react'
 
 interface Props { }
 
-const ErrorPage = (props: Props) => {
+const Error = (props: Props) => {
     return (
-        <div>ErrorPage</div>
+        <ErrorPage></ErrorPage>
     )
 }
 
-export default ErrorPage
+export default Error
