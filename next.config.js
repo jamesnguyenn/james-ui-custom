@@ -4,9 +4,6 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    experimental: {
-        runtime: 'edge',
-    },
 };
 // const withTypeScript = require('next-tsc');
 // module.exports = withTypeScript();

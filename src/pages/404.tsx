@@ -9,4 +9,3 @@ export default function ErrorCustomPage({ }: Props) {
     )
 }
 
-export const runtime = 'experimental-edge';
