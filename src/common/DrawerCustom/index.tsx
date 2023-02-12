@@ -9,9 +9,10 @@ interface DrawerCustomProps {
     direction?: "left" | "right" | "top" | "bottom";
     children(): React.ReactNode;
     lockBackgroundScroll?: boolean;
+    overlayColor?: string;
 }
 function DrawerCustom(props: DrawerCustomProps) {
-    const { isVisibleDrawer, handleCloseDrawer, direction = 'left', children, lockBackgroundScroll = false } = props
+    const { isVisibleDrawer, handleCloseDrawer, direction = 'left', children, lockBackgroundScroll = false, overlayColor = "rgb(0, 0, 0) " } = props
     return (
         <Drawer
             open={isVisibleDrawer}
@@ -19,6 +20,7 @@ function DrawerCustom(props: DrawerCustomProps) {
             direction={direction}
             className={styles.drawerCustom}
             lockBackgroundScroll={lockBackgroundScroll}
+            overlayColor={overlayColor}
 
         >
             {children()}

@@ -48,10 +48,11 @@ function HeaderWeb({ }: Props) {
                 {isIpad && <div className={classes.headerNavIcon} onClick={() => setIsOpenNav(true)}>
                     <i className="fa-solid fa-bars"></i>
                 </div>}
+                {<DrawerCustom isVisibleDrawer={isOpenNav && width <= 1023} handleCloseDrawer={() => setIsOpenNav(false)} direction='right' >
+                    {() => <SideBar sideBarMenuData={sideBarMenuDataJSON?.dataSideBar} isMobile={true} />}
+                </DrawerCustom>}
             </div>
-            <DrawerCustom isVisibleDrawer={isOpenNav} handleCloseDrawer={() => setIsOpenNav(false)} direction='right' >
-                {() => <SideBar sideBarMenuData={sideBarMenuDataJSON?.dataSideBar} />}
-            </DrawerCustom>
+
         </>
     )
 }
