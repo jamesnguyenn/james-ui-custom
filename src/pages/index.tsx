@@ -18,6 +18,7 @@ export default function Home({ sideBarMenuData }: any) {
 
       <main className={styles.main}>
         <InstallationComponent />
+        <Button></Button>
       </main>
     </>
   )
