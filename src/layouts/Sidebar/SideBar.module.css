@@ -5,7 +5,7 @@
     min-width: 250px;
     max-width: 250px;
     border-right: 1px solid var(--border-color);
-    padding: 16px 40px;
+    padding: 16px 0px;
     font-size: 14px;
     overflow-y: auto;
 }
@@ -23,17 +23,24 @@
     color: rgba(0, 0, 0, 0.45);
     font-size: 13px;
     font-weight: 400;
-    border-bottom: 1px solid rgba(5, 5, 5, 0.06);
-    padding: 8px 0;
     user-select: none;
     cursor: default;
+    padding: 8px 40px;
+    margin: 0px 8px;
 }
 .menuChildWrapper {
+    margin-top: 8px;
 }
 .menuChildItem {
-    padding: 8px 0;
     cursor: pointer;
     user-select: none;
+    transition: all 0.3s ease-in-out;
+    padding: 2px 40px;
+    margin: 0px 8px;
+}
+
+.menuChildItem:hover {
+    background-color: rgba(0, 0, 0, 0.06);
 }
 
 .menuChildTitle {

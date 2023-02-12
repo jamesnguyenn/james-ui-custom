@@ -14,6 +14,7 @@ const ErrorPage = (props: Props) => {
                     <div className="404">
                         <pre>
                             <code className={styles.code}>
+                                <div className={styles.errorTitle}>ERROR 404</div>
                                 <span>
                                     <span>&lt;!</span>
                                     <span className={styles.spanGreen}>DOCTYPE html</span>
@@ -66,6 +67,24 @@ const ErrorPage = (props: Props) => {
                                 <span className={styles.spanOrange}></span>
                                 <br />
                                 <span>
+                                    <span>&lt;</span>
+                                    <span className={styles.spanPink}>button</span>
+                                    <span>&gt;</span>
+                                </span>
+                                <div className={styles.button}>
+                                    <Link href="/" className={styles.viewFull}>
+                                        <span>
+                                            {`Click here to back homepage :)`}
+                                        </span>
+                                    </Link>
+                                </div>
+
+                                <span>
+                                    <span>&lt;/</span>
+                                    <span className={styles.spanPink}>button</span>
+                                    <span>&gt;</span>
+                                </span>
+                                <span>
                                     <span>&lt;/</span>
                                     <span className={styles.spanPink}>body</span>
                                     <span>&gt;</span>
@@ -81,13 +100,7 @@ const ErrorPage = (props: Props) => {
                     </div>
                 </div>
             </div>
-            <div className={styles.button}>
-                <Link href="/" className={styles.viewFull}>
-                    <span>
-                        {`Click here to back homepage :)`}
-                    </span>
-                </Link>
-            </div>
+
         </div >
     )
 }
