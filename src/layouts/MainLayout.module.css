@@ -4,4 +4,39 @@
 }
 .bodyContainer {
     height: 100%;
+    display: flex;
+}
+.mainContainer {
+    padding: 30px 16px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.mainContainer {
+    scrollbar-width: auto;
+    scrollbar-color: #909090;
+}
+
+/* Chrome, Edge, and Safari */
+.mainContainer::-webkit-scrollbar {
+    width: 15px;
+}
+
+.mainContainer::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.mainContainer::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 10px;
+    border: 5px solid #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+.mainContainer:hover::-webkit-scrollbar-thumb {
+    opacity: 1;
+    visibility: visible;
 }

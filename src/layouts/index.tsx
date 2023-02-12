@@ -17,7 +17,9 @@ function MainLayout({ children, sideBarMenuData, ...props }: Props) {
       <div className={classes.bodyWrapper}>
         <div className={classes.bodyContainer} >
           <SideBar sideBarMenuData={sideBarMenuData} />
-          {children}
+          <div className={classes.mainContainer}>
+            {children}
+          </div>
           {/* <Footer /> */}
         </div>
       </div>

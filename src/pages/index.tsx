@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import MainLayout from '@/layouts'
-import sideBarMenuDataJSON from "../../data/data-sideBar.json"
+import InstallationComponent from '@/screen/Installation'
+
 
 export default function Home({ sideBarMenuData }: any) {
 
@@ -15,11 +15,10 @@ export default function Home({ sideBarMenuData }: any) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
-      <MainLayout sideBarMenuData={sideBarMenuDataJSON?.dataSideBar}>
-        <main className={styles.main}>
 
-        </main>
-      </MainLayout>
+      <main className={styles.main}>
+        <InstallationComponent />
+      </main>
     </>
   )
 }
