@@ -1,6 +1,9 @@
 import ErrorPage from '@/components/ErrorPage'
+interface IProps {
 
-const Error = () => {
+}
+const Error = (props: IProps) => {
+    console.log("🚀 ~ props", props)
     return (
         <ErrorPage></ErrorPage>
     )
@@ -9,9 +12,15 @@ const Error = () => {
 export default Error
 
 export async function getStaticProps() {
-
+    const res = await new Promise((resolve, reject) => {
+        return resolve("ErrorPage")
+    }
+    )
+    console.log("🚀 ~ res", res)
     return {
-        props: {}
+        props: {
+            res
+        }
     }
 }
 export const config = {
