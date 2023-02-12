@@ -4,11 +4,14 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    experimental: {
+        runtime: 'edge',
+    },
 };
 // const withTypeScript = require('next-tsc');
 // module.exports = withTypeScript();
 
 // next.config.js
-const withTM = require('next-transpile-modules')(['james-ui-custom']); // pass the modules you would like to see transpiled
+// const withTM = require('next-transpile-modules')(['james-ui-custom']); // pass the modules you would like to see transpiled
 
 module.exports = nextConfig;
