@@ -1,9 +1,8 @@
 import ErrorPage from '@/components/ErrorPage'
 
 
-interface Props { }
 
-const Error = (props: Props) => {
+const Error = () => {
     return (
         <ErrorPage></ErrorPage>
     )
