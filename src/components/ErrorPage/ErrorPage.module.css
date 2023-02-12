@@ -373,10 +373,14 @@
 }
 
 @media screen and (max-width: 767.98px) {
+    .error {
+        left: -30%;
+        font-size: 12px;
+    }
     .errorWrapper:before {
-        font-size: 60px;
+        font-size: 50px;
     }
     .errorWrapper:after {
-        font-size: 60px;
+        font-size: 50px;
     }
 }
