@@ -1,18 +1,30 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import classes from "./HeaderWeb.module.css"
 import logo from "../../../public/images/logo.webp"
 import Link from 'next/link'
+import { useResize } from '@/hooks'
+import DrawerCustom from '@/common/DrawerCustom'
+import SideBar from '@/layouts/Sidebar';
+import sideBarMenuDataJSON from "../../../data/data-sideBar.json";
 interface Props { }
 
 function HeaderWeb({ }: Props) {
+    const { width, height } = useResize();
+    const [isOpenNav, setIsOpenNav] = useState<boolean>(false)
+    const isMobile = useMemo(() => {
+        return width <= 767
+    }, [width])
+    const isIpad = useMemo(() => {
+        return width <= 1023
+    }, [width])
     return (
         <>
             <div className={classes.headerLogoWrapper}>
                 <Link href={"/"}>
                     <div className={classes.logo}>
-                        <Image src={logo} width={50} height={50} alt="logo" />
-                        <span>Front End Component Example</span>
+                        <Image src={logo} width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} alt="logo" />
+                        <span>Front End Component</span>
                     </div>
                 </Link>
 
@@ -33,7 +45,13 @@ function HeaderWeb({ }: Props) {
                         <i className="fa-brands fa-square-facebook" />
                     </span>
                 </a>
+                {isIpad && <div className={classes.headerNavIcon} onClick={() => setIsOpenNav(true)}>
+                    <i className="fa-solid fa-bars"></i>
+                </div>}
             </div>
+            <DrawerCustom isVisibleDrawer={isOpenNav} handleCloseDrawer={() => setIsOpenNav(false)} direction='right' >
+                {() => <SideBar sideBarMenuData={sideBarMenuDataJSON?.dataSideBar} />}
+            </DrawerCustom>
         </>
     )
 }

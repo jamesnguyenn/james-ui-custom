@@ -12,8 +12,7 @@ yarn add james-ui-custom
 
 Note: If you would like to use this package for [Nextjs]. Please follow the instructions below:
 
-After installing, please help me: </br>
-1/ Add option to next.config.js file:</br>
+After installing, please help me add more config option to next.config.js file:</br>
 
 ```
 const nextConfig = {

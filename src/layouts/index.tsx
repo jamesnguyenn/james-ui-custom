@@ -1,5 +1,4 @@
 import React from 'react'
-import { classicNameResolver } from 'typescript'
 import Footer from './Footer'
 import Header from './Header'
 import classes from "./MainLayout.module.css"

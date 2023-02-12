@@ -8,11 +8,12 @@ import Link from 'next/link';
 import { useResize } from '@/hooks';
 
 interface Props {
-    sideBarMenuData: ISidebarParent[]
+    sideBarMenuData: any[]
 }
 
 const SideBar = (props: Props) => {
     const { sideBarMenuData } = props
+    console.log("🚀 ~ sideBarMenuData", sideBarMenuData)
     const { width, height } = useResize()
     return (
         <>

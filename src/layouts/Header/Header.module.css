@@ -5,7 +5,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0 aut0;
+    margin: 0 auto;
     z-index: 999;
     display: flex;
     align-items: center;
@@ -20,4 +20,10 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--padding);
+    gap: 8px;
+}
+@media screen and (max-width: 767.98px) {
+    .headerContainer {
+        padding: 20px;
+    }
 }

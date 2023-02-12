@@ -16,3 +16,8 @@
 .headerNavIcon {
     cursor: pointer;
 }
+@media screen and (max-width: 767.98px) {
+    .logo {
+        font-size: 17px;
+    }
+}

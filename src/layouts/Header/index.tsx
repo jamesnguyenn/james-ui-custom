@@ -11,7 +11,7 @@ const Header = (props: Props) => {
         <header className={classes.headerWrapper}>
             <div className={classes.headerContainer}>
                 {
-                    width <= 767 ? <HeaderMobile /> : <HeaderWeb />
+                    <HeaderWeb />
                 }
             </div>
         </header>
