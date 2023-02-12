@@ -2,6 +2,11 @@
     "name": "james-ui-custom",
     "version": "0.0.3",
     "description": "Front End Component Custom",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "files": [
+        "build/*"
+    ],
     "scripts": {
         "dev": "next dev",
         "build": "next build",
