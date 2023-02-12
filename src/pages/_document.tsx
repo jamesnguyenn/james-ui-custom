@@ -1,6 +1,6 @@
-import MainLayout from '@/layouts'
+
 import { Html, Head, Main, NextScript } from 'next/document'
-import sideBarMenuDataJSON from "../../data/data-sideBar.json"
+
 export default function Document() {
   return (
     <Html lang="en">

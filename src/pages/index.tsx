@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import InstallationComponent from '@/screen/Installation'
-
+import { Button } from "james-ui-custom"
 
 export default function Home({ sideBarMenuData }: any) {
 

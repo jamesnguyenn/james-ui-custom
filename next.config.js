@@ -4,6 +4,7 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    transpilePackages: ['james-ui-custom'],
 };
 // const withTypeScript = require('next-tsc');
 // module.exports = withTypeScript();
