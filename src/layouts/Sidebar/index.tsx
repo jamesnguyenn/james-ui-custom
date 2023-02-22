@@ -24,11 +24,10 @@ const SideBar = (props: Props) => {
                         <div style={{ height: "1px", backgroundColor: "rgba(5, 5, 5, 0.06)", margin: "0px 40px" }}></div>
                         <ul className={classes.menuChildWrapper}>
                             {menuParent?.children && menuParent?.children.length > 0 && menuParent?.children.map((menuChild: ISidebarChild) => {
-                                return <li key={menuChild?.id} className={`${classes.menuChildItem} ${router.pathname === menuChild?.page ? classes.menuChildItemActive : ""} ${router.pathname === "/" && menuChild?.page === "/getting-started/installation" ? classes.menuChildItemActive : ""}`}>
-                                    <Link href={menuChild?.page ? menuChild?.page : "/error"} >
-                                        <h3 className={classes.menuChildTitle}>{menuChild?.title}</h3>
-                                    </Link>
+                                return <Link key={menuChild?.id} href={menuChild?.page ? menuChild?.page : "/error"}><li className={`${classes.menuChildItem} ${router.pathname === menuChild?.page ? classes.menuChildItemActive : ""} ${router.pathname === "/" && menuChild?.page === "/getting-started/installation" ? classes.menuChildItemActive : ""}`}>
+                                    <h3 className={classes.menuChildTitle}>{menuChild?.title}</h3>
                                 </li>
+                                </Link>
                             })}
                         </ul>
                     </li>
