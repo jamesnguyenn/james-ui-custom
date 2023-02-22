@@ -6,7 +6,7 @@ import { Button } from "../../common"
 import { ISidebarChild, ISidebarParent } from '@/interface/Sidebar';
 import Link from 'next/link';
 import { useResize } from '@/hooks';
-
+import { useRouter } from "next/router";
 interface Props {
     sideBarMenuData: any[],
     isMobile: boolean
@@ -14,8 +14,7 @@ interface Props {
 
 const SideBar = (props: Props) => {
     const { sideBarMenuData, isMobile } = props
-    console.log("🚀 ~ sideBarMenuData", sideBarMenuData)
-    const { width, height } = useResize()
+    const router = useRouter();
     return (
         <>
             {isMobile ? <ul className={classes.sideBarWrapper}>
@@ -25,7 +24,7 @@ const SideBar = (props: Props) => {
                         <div style={{ height: "1px", backgroundColor: "rgba(5, 5, 5, 0.06)", margin: "0px 40px" }}></div>
                         <ul className={classes.menuChildWrapper}>
                             {menuParent?.children && menuParent?.children.length > 0 && menuParent?.children.map((menuChild: ISidebarChild) => {
-                                return <li key={menuChild?.id} className={classes.menuChildItem}>
+                                return <li key={menuChild?.id} className={`${classes.menuChildItem} ${router.pathname === menuChild?.page ? classes.menuChildItemActive : ""} ${router.pathname === "/" && menuChild?.page === "/getting-started/installation" ? classes.menuChildItemActive : ""}`}>
                                     <Link href={menuChild?.page ? menuChild?.page : "/error"} >
                                         <h3 className={classes.menuChildTitle}>{menuChild?.title}</h3>
                                     </Link>

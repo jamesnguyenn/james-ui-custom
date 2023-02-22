@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './Drawer.module.css';
 import Drawer from 'react-modern-drawer'
 import 'react-modern-drawer/dist/index.css';
 
@@ -18,7 +17,6 @@ function DrawerCustom(props: DrawerCustomProps) {
             open={isVisibleDrawer}
             onClose={handleCloseDrawer}
             direction={direction}
-            className={styles.drawerCustom}
             lockBackgroundScroll={lockBackgroundScroll}
             overlayColor={overlayColor}
 

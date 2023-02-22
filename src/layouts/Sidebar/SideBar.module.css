@@ -5,7 +5,6 @@
     min-width: 250px;
     max-width: 250px;
     border-right: 1px solid var(--border-color);
-    padding: 16px 0px;
     font-size: 14px;
     overflow-y: auto;
 }
@@ -35,8 +34,13 @@
     cursor: pointer;
     user-select: none;
     transition: all 0.3s ease-in-out;
-    padding: 2px 40px;
-    margin: 0px 8px;
+    padding: 16px 48px;
+    border-radius: 8px;
+}
+
+.menuChildItemActive {
+    background-color: #e6f4ff;
+    color: #1677ff;
 }
 
 .menuChildItem:hover {

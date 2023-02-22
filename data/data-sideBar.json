@@ -21,62 +21,6 @@
                     "page": "/components/button"
                 }
             ]
-        },
-        {
-            "id": "3",
-            "title": "Layout",
-            "children": [
-                {
-                    "id": "1",
-                    "title": "Layout"
-                }
-            ]
-        },
-        {
-            "id": "4",
-            "title": "Navigation",
-            "children": [
-                {
-                    "id": "1",
-                    "title": "Pagination"
-                },
-                {
-                    "id": "2",
-                    "title": "Dropdown"
-                },
-                {
-                    "id": "3",
-                    "title": "Breadcrumb"
-                }
-            ]
-        },
-        {
-            "id": "5",
-            "title": "Data Entry",
-            "children": [
-                {
-                    "id": "1",
-                    "title": "Calendar"
-                },
-                {
-                    "id": "2",
-                    "title": "DatePicker"
-                },
-                {
-                    "id": "3",
-                    "title": "TimePicker"
-                }
-            ]
-        },
-        {
-            "id": "6",
-            "title": "Navigation",
-            "children": [
-                {
-                    "id": "1",
-                    "title": "Pagination"
-                }
-            ]
         }
     ]
 }

@@ -1,6 +1,9 @@
 🤖 This is a Front-End Components Custom.
 
-## Getting Started
+## Getting Started:
+
+-   Demo: [https://james-ui-custom.pages.dev/](https://james-ui-custom.pages.dev/)
+-   Github: [https://github.com/jamesnguyenn](https://github.com/jamesnguyenn)
 
 First, install npm packages:
 
