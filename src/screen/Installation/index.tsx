@@ -22,7 +22,7 @@ After installing, please help me add more config option to next.config.js file: 
     }
     return (
 
-        <PagesCommon title='🤖 Install Front-End Components Custom    '>
+        <PagesCommon title='🤖 Front-End Components Custom    '>
             <div className={styles.container} style={{ gap: "8px" }}>
                 <h2>
                     #Getting Started

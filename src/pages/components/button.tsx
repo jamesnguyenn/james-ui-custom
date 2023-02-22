@@ -1,30 +1,42 @@
 import CodeBlockExample from '@/components/CodeBlockExample'
 import PagesCommon from '@/components/PagesCommon'
 import { useResize } from '@/hooks'
-import React, { useRef } from 'react'
-import { CodeBlock, dracula } from 'react-code-blocks'
+import React, { useRef, useState } from 'react'
+import { CopyBlock, dracula } from 'react-code-blocks'
 import { Button as ButtonCommon } from '@/common'
+import Image from 'next/image'
 interface Props { }
 
 function Button({ }: Props) {
   const buttonWrapperRef = useRef<HTMLDivElement>(null)
-  const { width, height } = useResize({ element: buttonWrapperRef.current })
+  const { width, height } = useResize({ element: buttonWrapperRef.current });
+  const [listsScriptExpand, setListsScriptExpand] = useState<number[]>([])
+  console.log("🚀 ~ listsScriptExpand", listsScriptExpand)
+  const handleExpandScript = (id: number) => {
+    const findIndexIdExist = listsScriptExpand.findIndex((ite: number) => ite === id)
+    if (findIndexIdExist !== -1) {
+      const newArray = [...listsScriptExpand];
+      newArray.splice(findIndexIdExist, 1)
+      setListsScriptExpand(newArray)
+    } else {
+      setListsScriptExpand((pre) => [...pre, id])
+    }
+  }
   const renderExampleButton = () => {
     return <>
       {dataButton.map(data => {
-        return <>
-          <CodeBlockExample title={data.title} desc={data.desc} renderExampleUI={data?.renderExample} >
-            <div style={{ marginTop: "20px" }}>
-              <CodeBlock
-                text={data?.renderCodeText()}
-                language={"jsx"}
-                showLineNumbers={true}
-                theme={dracula}
-              />
-            </div>
-          </CodeBlockExample>
-        </>
-      })}
+        return <CodeBlockExample key={data?.id} id={data?.id} title={data.title} desc={data.desc} renderExampleUI={data?.renderExample} handleExpandScript={handleExpandScript} listsScriptExpand={listsScriptExpand}>
+          <CopyBlock
+            text={data?.renderCodeText()}
+            language={"jsx"}
+            showLineNumbers={true}
+            theme={dracula}
+            codeBlock={true}
+          />
+        </CodeBlockExample>
+
+      })
+      }
 
     </>
   }

@@ -14,10 +14,11 @@ interface Props {
 
 const SideBar = (props: Props) => {
     const { sideBarMenuData, isMobile } = props
+    console.log("🚀 ~ sideBarMenuData", sideBarMenuData)
     const router = useRouter();
     return (
         <>
-            {isMobile ? null : <ul className={classes.sideBarWrapper}>
+            {isMobile ? <ul className={classes.sideBarWrapper}>
                 {sideBarMenuData && sideBarMenuData.length > 0 && sideBarMenuData?.map((menuParent: ISidebarParent) => {
                     return <li key={menuParent?.id} className={classes.menuParentWrapper}>
                         <h2 className={classes.menuParentTitle}>{menuParent?.title}</h2>
@@ -32,7 +33,7 @@ const SideBar = (props: Props) => {
                         </ul>
                     </li>
                 })}
-            </ul>}
+            </ul> : null}
         </>
 
     )

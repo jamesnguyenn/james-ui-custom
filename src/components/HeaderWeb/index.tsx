@@ -49,7 +49,7 @@ function HeaderWeb({ }: Props) {
                     <i className="fa-solid fa-bars"></i>
                 </div>}
                 {<DrawerCustom isVisibleDrawer={isOpenNav && width <= 1023} handleCloseDrawer={() => setIsOpenNav(false)} direction='right' >
-                    {() => <SideBar sideBarMenuData={sideBarMenuDataJSON?.dataSideBar} isMobile={true} />}
+                    {() => <SideBar sideBarMenuData={sideBarMenuDataJSON?.dataSideBar} isMobile={width <= 1024} />}
                 </DrawerCustom>}
             </div>
 
