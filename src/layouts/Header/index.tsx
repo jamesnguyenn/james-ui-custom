@@ -1,4 +1,3 @@
-import HeaderMobile from '@/components/HeaderMobile'
 import HeaderWeb from '@/components/HeaderWeb'
 import { useResize } from '@/hooks'
 import React from 'react'

@@ -9,42 +9,23 @@ interface Props { }
 function Button({ }: Props) {
   const buttonWrapperRef = useRef<HTMLDivElement>(null)
   const { width, height } = useResize({ element: buttonWrapperRef.current })
-
-  const renderExampleButtonType = () => {
-    return <div>
-      <div>
-        <ButtonCommon type='primary'>Primary Button</ButtonCommon>
-      </div>
-    </div>
-  }
-  const renderCodeTextButtonType = () => {
-    return `import React from 'react'
-
-interface Props { }
-
-const Button = (props: Props) => {
-    return (
-        <div>
-            <div>Button</div>
-        </div>
-    )
-}
-
-export default Button;`
-  }
   const renderExampleButton = () => {
-    const numberPerView = 2
-    const widthPerItem = width / numberPerView - 16 // 16 is gap between items
     return <>
-      <CodeBlockExample width={widthPerItem} title='Type' desc='There are primary button, default button, dashed button, text button and link button in antd.' renderExampleUI={renderExampleButtonType} >
-        <CodeBlock
-          text={renderCodeTextButtonType()}
-          language={"jsx"}
-          showLineNumbers={true}
-          theme={dracula}
-        />
-      </CodeBlockExample>
-      <CodeBlockExample width={widthPerItem} title='Type' desc='There are primary button, default button, dashed button, text button and link button in antd.' renderExampleUI={renderExampleButtonType} />
+      {dataButton.map(data => {
+        return <>
+          <CodeBlockExample title={data.title} desc={data.desc} renderExampleUI={data?.renderExample} >
+            <div style={{ marginTop: "20px" }}>
+              <CodeBlock
+                text={data?.renderCodeText()}
+                language={"jsx"}
+                showLineNumbers={true}
+                theme={dracula}
+              />
+            </div>
+          </CodeBlockExample>
+        </>
+      })}
+
     </>
   }
   return (<PagesCommon title="Button" desc="To trigger an operation.">
@@ -59,8 +40,6 @@ export default Button;`
           We provide 5 types of button:
         </p>
         <ul style={{ marginLeft: "32px" }}>
-          <li style={{ marginBottom: "8px", listStyleType: "circle" }}>Primary button: indicate the main action, one primary button at most in one section.
-          </li>
           <li style={{ marginBottom: "8px", listStyleType: "circle" }}>Default button: indicate a series of actions without priority.</li>
           <li style={{ marginBottom: "8px", listStyleType: "circle" }}>Dashed button: used for adding action commonly.</li>
           <li style={{ marginBottom: "8px", listStyleType: "circle" }}>Text button: used for the most secondary action.</li>
@@ -79,4 +58,95 @@ export default Button;`
   )
 }
 
-export default Button
+export default Button;
+
+const dataButton = [
+  {
+    id: 1,
+    title: "Type",
+    desc: "There are primary button, default button, dashed button, text button and link button.",
+    renderExample: () => renderExampleButtonType(),
+    renderCodeText: () => renderCodeTextButtonType()
+  },
+  {
+    id: 2,
+    title: "Disabled",
+    desc: "Button components can display disabled.",
+    renderExample: () => renderExampleButtonDisabled(),
+    renderCodeText: () => renderCodeTextButtonDisabled()
+  }
+]
+
+const renderExampleButtonType = () => {
+  return <div>
+    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+      <ButtonCommon type='default'>Default Button</ButtonCommon>
+      <ButtonCommon type='dashed'>Dashed Button</ButtonCommon>
+      <ButtonCommon type='text'>Text Button</ButtonCommon>
+      <ButtonCommon type="link">Link Button</ButtonCommon>
+    </div>
+  </div>
+}
+
+const renderCodeTextButtonType = () => {
+  return `import React from 'react';
+import { Button } from 'james-ui-custom';
+
+interface Props { }
+
+const Apps: React.FC = (props: Props) => {
+    return (
+      <>
+       <Button type='default'>Default Button</Button>
+       <Button type='primary'>Primary Button</Button>
+       <Button type="text">Text Button</Button>
+       <Button type="link">Link Button</Button>
+      </>
+    )
+}
+
+export default Apps;`
+}
+
+const renderExampleButtonDisabled = () => {
+  return <div>
+    <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <ButtonCommon type='default'>Default Button</ButtonCommon>
+        <ButtonCommon type='default' disabled={true}>Default Button (disabled)</ButtonCommon>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <ButtonCommon type='dashed'>Dashed Button</ButtonCommon>
+        <ButtonCommon type='dashed' disabled={true}>Dashed Button (disabled)</ButtonCommon>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <ButtonCommon type='text'>Text Button</ButtonCommon>
+        <ButtonCommon type='text' disabled={true}>Text Button (disabled)</ButtonCommon>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+        <ButtonCommon type="link">Link Button</ButtonCommon>
+        <ButtonCommon type="link" disabled={true}>Link Button (disabled)</ButtonCommon>
+      </div>
+    </div>
+  </div>
+}
+
+const renderCodeTextButtonDisabled = () => {
+  return `import React from 'react';
+import { Button } from 'james-ui-custom';
+
+interface Props { }
+
+const Apps: React.FC = (props: Props) => {
+    return (
+      <>
+       <Button type='default' disabled={true}>Default Button</Button>
+       <Button type='dashed' disabled={true}>Dashed Button</Button>
+       <Button type="text" disabled={true}>Text Button</Button>
+       <Button type="link" disabled={true}>Link Button</Button>
+      </>
+    )
+}
+
+export default Apps;`
+}

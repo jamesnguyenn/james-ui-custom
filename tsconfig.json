@@ -21,7 +21,7 @@
         },
         "outDir": "build"
     },
-    // "include": ["src/common"],
+    // "include": ["src/common/*"],
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]
 }
