@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react'
 interface Props {
-    element?: HTMLElement
+    element?: HTMLElement | HTMLDivElement | null
 }
 export function useResize(props?: Props) {
     const [width, setWidth] = useState<number>(0)

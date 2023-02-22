@@ -13,10 +13,10 @@ function HeaderWeb({ }: Props) {
     const { width, height } = useResize();
     const [isOpenNav, setIsOpenNav] = useState<boolean>(false)
     const isMobile = useMemo(() => {
-        return width <= 767
+        return width <= 767 && width !== 0
     }, [width])
     const isIpad = useMemo(() => {
-        return width <= 1023
+        return width <= 1023 && width !== 0
     }, [width])
     return (
         <>

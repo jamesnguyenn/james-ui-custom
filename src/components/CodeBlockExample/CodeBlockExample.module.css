@@ -1,0 +1,23 @@
+.wrapper {
+    border: 1px solid rgba(5, 5, 5, 0.06);
+    border-radius: 6px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    padding: 42px 24px 50px;
+    position: relative;
+}
+.example {
+    border-bottom: 1px solid rgba(5, 5, 5, 0.06);
+}
+.title {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 8px 16px;
+}

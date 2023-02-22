@@ -17,7 +17,7 @@ function MainLayout({ children, sideBarMenuData, ...props }: Props) {
       <Header />
       <div className={classes.bodyWrapper}>
         <div className={classes.bodyContainer} >
-          <SideBar sideBarMenuData={sideBarMenuData} isMobile={width >= 1024} />
+          <SideBar sideBarMenuData={sideBarMenuData} isMobile={width <= 1024} />
           <div className={classes.mainContainer}>
             {children}
           </div>
