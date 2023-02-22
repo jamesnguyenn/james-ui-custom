@@ -90,14 +90,13 @@ const dataButton = [
 ]
 
 const renderExampleButtonType = () => {
-  return <div>
-    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-      <ButtonCommon type='default'>Default Button</ButtonCommon>
-      <ButtonCommon type='dashed'>Dashed Button</ButtonCommon>
-      <ButtonCommon type='text'>Text Button</ButtonCommon>
-      <ButtonCommon type="link">Link Button</ButtonCommon>
-    </div>
+  return <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+    <ButtonCommon type='default'>Default Button</ButtonCommon>
+    <ButtonCommon type='dashed'>Dashed Button</ButtonCommon>
+    <ButtonCommon type='text'>Text Button</ButtonCommon>
+    <ButtonCommon type="link">Link Button</ButtonCommon>
   </div>
+
 }
 
 const renderCodeTextButtonType = () => {
@@ -121,26 +120,25 @@ export default Apps;`
 }
 
 const renderExampleButtonDisabled = () => {
-  return <div>
+  return <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+      <ButtonCommon type='default'>Default Button</ButtonCommon>
+      <ButtonCommon type='default' disabled={true}>Default Button (disabled)</ButtonCommon>
+    </div>
     <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-        <ButtonCommon type='default'>Default Button</ButtonCommon>
-        <ButtonCommon type='default' disabled={true}>Default Button (disabled)</ButtonCommon>
-      </div>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-        <ButtonCommon type='dashed'>Dashed Button</ButtonCommon>
-        <ButtonCommon type='dashed' disabled={true}>Dashed Button (disabled)</ButtonCommon>
-      </div>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-        <ButtonCommon type='text'>Text Button</ButtonCommon>
-        <ButtonCommon type='text' disabled={true}>Text Button (disabled)</ButtonCommon>
-      </div>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-        <ButtonCommon type="link">Link Button</ButtonCommon>
-        <ButtonCommon type="link" disabled={true}>Link Button (disabled)</ButtonCommon>
-      </div>
+      <ButtonCommon type='dashed'>Dashed Button</ButtonCommon>
+      <ButtonCommon type='dashed' disabled={true}>Dashed Button (disabled)</ButtonCommon>
+    </div>
+    <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+      <ButtonCommon type='text'>Text Button</ButtonCommon>
+      <ButtonCommon type='text' disabled={true}>Text Button (disabled)</ButtonCommon>
+    </div>
+    <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+      <ButtonCommon type="link">Link Button</ButtonCommon>
+      <ButtonCommon type="link" disabled={true}>Link Button (disabled)</ButtonCommon>
     </div>
   </div>
+
 }
 
 const renderCodeTextButtonDisabled = () => {
