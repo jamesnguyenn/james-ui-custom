@@ -3,15 +3,16 @@ import PagesCommon from '@/components/PagesCommon'
 import { useResize } from '@/hooks'
 import React, { useRef, useState } from 'react'
 import { CopyBlock, dracula } from 'react-code-blocks'
-import { Button as ButtonCommon } from '@/common'
-import Image from 'next/image'
+import { Button as ButtonCommon } from '@/common';
+
 interface Props { }
 
 function Button({ }: Props) {
   const buttonWrapperRef = useRef<HTMLDivElement>(null)
   const { width, height } = useResize({ element: buttonWrapperRef.current });
   const [listsScriptExpand, setListsScriptExpand] = useState<number[]>([])
-  console.log("🚀 ~ listsScriptExpand", listsScriptExpand)
+  const [loadings, setLoadings] = useState<boolean[]>([]);
+
   const handleExpandScript = (id: number) => {
     const findIndexIdExist = listsScriptExpand.findIndex((ite: number) => ite === id)
     if (findIndexIdExist !== -1) {
@@ -86,6 +87,13 @@ const dataButton = [
     desc: "Button components can display disabled.",
     renderExample: () => renderExampleButtonDisabled(),
     renderCodeText: () => renderCodeTextButtonDisabled()
+  },
+  {
+    id: 3,
+    title: "Loading",
+    desc: "A loading indicator can be added to a button by setting the loading property on the Button.",
+    renderExample: () => renderExampleButtonLoading(),
+    renderCodeText: () => renderCodeTextButtonLoading()
   }
 ]
 
@@ -154,6 +162,30 @@ const Apps: React.FC = (props: Props) => {
        <Button type='dashed' disabled={true}>Dashed Button</Button>
        <Button type="text" disabled={true}>Text Button</Button>
        <Button type="link" disabled={true}>Link Button</Button>
+      </>
+    )
+}
+
+export default Apps;`
+}
+
+const renderExampleButtonLoading = () => {
+  return <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+    <ButtonCommon type='default' loading={true}>Default Button</ButtonCommon>
+  </div>
+
+}
+
+const renderCodeTextButtonLoading = () => {
+  return `import React from 'react';
+import { Button } from 'james-ui-custom';
+
+interface Props { }
+
+const Apps: React.FC = (props: Props) => {
+    return (
+      <>
+       <Button type='default' loading={true}>Loading</Button>
       </>
     )
 }

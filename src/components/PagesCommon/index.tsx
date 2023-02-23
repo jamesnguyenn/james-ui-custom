@@ -1,5 +1,5 @@
 import { getTitleBrowser } from '@/utils';
-import React, { useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 
 interface Props {
     title: string;
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const PagesCommon = (props: Props) => {
-    useLayoutEffect(() => {
+    useEffect(() => {
         getTitleBrowser(props.title);
     }, [props.title])
     return (

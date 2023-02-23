@@ -65,7 +65,7 @@ const CodeBlock = (props: Props) => {
                                     }} />
                             </span>
                         </div>
-                        <div className={`${isActiveExpand ? styles.codeBoxScriptTextActive : styles.codeBoxScriptText}`} >
+                        <div className={`${styles.codeBoxScriptText} ${isActiveExpand ? styles.codeBoxScriptTextActive : ""}`} >
                             {props.children}
                         </div>
                     </div>

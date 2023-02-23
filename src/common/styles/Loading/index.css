@@ -1,0 +1,12 @@
+.custom-ui-loading-circle {
+    border-radius: 100%; 
+    border-right-color: 'transparent' ;
+    border-bottom-color: 'transparent' ;
+    animation: loadingCircle 0.5s linear infinite;
+}
+
+@keyframes loadingCircle {
+    100%{
+        rotate: 360deg;
+    }
+}

@@ -39,7 +39,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
 }
 .codeBoxActionScriptWrapper {
     cursor: pointer;
@@ -52,13 +51,14 @@
     position: relative;
 }
 .codeBoxScriptText {
-    height: 0;
+    margin-top: 8px;
+    max-height: 0;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: max-height 0.5s linear;
 }
 .codeBoxScriptTextActive {
-    height: 100%;
-    overflow: auto;
+    max-height: 8000px;
+
 }
 @media screen and (max-width: 767.98px) {
     .wrapper {
